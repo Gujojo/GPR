@@ -1,0 +1,25 @@
+clear all;
+close all;
+clc;
+
+numYear = 7;
+num = 100;
+mse = zeros(numYear, 5, 'double');
+
+for p = 1: numYear
+    path = ['data', num2str(2009+p)];
+    load([path, '/MSE.mat']);
+    mse(p, :) = MSE;
+%     load([path, '/theta.mat']);
+%     subplot(1, 2, 1);
+%     scatter(theta(1, :), theta(2, :));
+%     subplot(1, 2, 2);
+%     scatter(theta(3, :), theta(4, :));
+end
+
+MSE = mse;
+save('MSE.mat', MSE);
+
+year = 2010: 2016;
+xlabel('Äê·Ý');
+ylabel

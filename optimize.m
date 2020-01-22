@@ -22,7 +22,7 @@ function [sigma_f, l, sigma_y, sigma_n, opt] = optimize(XTrain, YTrain)
     % 迭代收敛轮数
     round = 50;
     % 绘图控制
-    Plot = 2;
+    Plot = 0;
     %% 初始化
     x = zeros(dim, pNum, 'double');
     vx = zeros(dim, pNum, 'double');
